@@ -18,9 +18,9 @@ jobs:
         run: mvn clean test | tee test.log
       - name: build artifacts
         run: mvn clean package -Dmaven.test.skip
-      - name: set up artifacts
-        run: mkdir artifacts && cp test.log target/*.jar artifacts
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Package
-          path: artifacts
+#      - name: set up artifacts
+#        run: mkdir artifacts && cp test.log target/*.jar artifacts
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          name: Package
+#          path: artifacts
